@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "engines": {
+      "node": "16.x",
+      "npm": "8.x"
+    }
+  }
+  
