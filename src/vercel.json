@@ -4,14 +4,35 @@
       {
         "src": "src/index.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
       }
     ],
     "env": {
-      "NODE_ENV": "production"
+      "NODE_ENV": "production",
+      "REACT_APP_API_URL": "https://api.example.com"
     },
     "engines": {
       "node": "16.x",
       "npm": "8.x"
-    }
+    },
+    "build": {
+      "env": {
+        "CUSTOM_BUILD_ENV_VAR": "your-value"
+      }
+    },
+    "alias": "my-project.vercel.app",
+    "regions": ["sfo1", "nyc1"]
   }
   
