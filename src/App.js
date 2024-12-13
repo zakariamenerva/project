@@ -2,7 +2,7 @@ import UsersApp from './Users/UsersApp'
 import './App.css';
 
 function App() {
-<UsersApp/>
+  <UsersApp/>
 }
 
 export default App;
